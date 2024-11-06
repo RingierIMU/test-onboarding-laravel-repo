@@ -141,13 +141,13 @@ check_terraecs() {
 }
 
 target_upgrade() {
-  local git_branch="${1:-git@github.com:RingierIMU/tf-common.git}"
+  local git_repo="${1:-git@github.com:RingierIMU/tf-common.git}" git_branch="${2:-master}"
 
   local change_profile=0 change_cloudflare=0 change_ns_zone=0
   local region default_region ns_zone_new default_ns_zone ns_zone_id_new default_ns_zone_id maintenance_window default_maintenance_window
   local email default_email api_key default_api_key
-  consolelog "Using git branch: ${git_branch}"
-  git clone ${git_branch} tmp_common
+  consolelog "Using git branch: ${git_branch} from: ${git_repo}"
+  git clone --branch "${git_branch}" --single-branch "${git_repo}" tmp_common
 
   consolelog "copying latest .dot file libs before using get_value..."
   cp -fr tmp_common/.bash ./
