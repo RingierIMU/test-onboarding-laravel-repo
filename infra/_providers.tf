@@ -8,8 +8,15 @@ provider "aws" {
   region  = local.main_vpc_region
   profile = "rimu"
 
-  assume_role {
-    role_arn = var.prefix == "rimu" ? "" : "arn:aws:iam::${local.main_account_id}:role/administrators"
+  dynamic "assume_role" {
+    for_each = var.prefix == "rimu" ? [] : [1]
+    content {
+      role_arn = "arn:aws:iam::${local.main_account_id}:role/administrators"
+    }
+  }
+
+  default_tags {
+    tags = var.provider_default_tags
   }
 }
 
@@ -18,8 +25,15 @@ provider "aws" {
   region  = "eu-west-1"
   profile = "rimu"
 
-  assume_role {
-    role_arn = var.prefix == "rimu" ? "" : "arn:aws:iam::${local.main_account_id}:role/administrators"
+  dynamic "assume_role" {
+    for_each = var.prefix == "rimu" ? [] : [1]
+    content {
+      role_arn = "arn:aws:iam::${local.main_account_id}:role/administrators"
+    }
+  }
+
+  default_tags {
+    tags = var.provider_default_tags
   }
 }
 
@@ -28,8 +42,15 @@ provider "aws" {
   region  = "us-east-1"
   profile = "rimu"
 
-  assume_role {
-    role_arn = var.prefix == "rimu" ? "" : "arn:aws:iam::${local.main_account_id}:role/administrators"
+  dynamic "assume_role" {
+    for_each = var.prefix == "rimu" ? [] : [1]
+    content {
+      role_arn = "arn:aws:iam::${local.main_account_id}:role/administrators"
+    }
+  }
+
+  default_tags {
+    tags = var.provider_default_tags
   }
 }
 
@@ -38,8 +59,15 @@ provider "aws" {
   region  = "ap-southeast-1"
   profile = "rimu"
 
-  assume_role {
-    role_arn = var.prefix == "rimu" ? "" : "arn:aws:iam::${local.main_account_id}:role/administrators"
+  dynamic "assume_role" {
+    for_each = var.prefix == "rimu" ? [] : [1]
+    content {
+      role_arn = "arn:aws:iam::${local.main_account_id}:role/administrators"
+    }
+  }
+
+  default_tags {
+    tags = var.provider_default_tags
   }
 }
 
@@ -48,8 +76,15 @@ provider "aws" {
   region  = "eu-central-1"
   profile = "rimu"
 
-  assume_role {
-    role_arn = var.prefix == "rimu" ? "" : "arn:aws:iam::${local.main_account_id}:role/administrators"
+  dynamic "assume_role" {
+    for_each = var.prefix == "rimu" ? [] : [1]
+    content {
+      role_arn = "arn:aws:iam::${local.main_account_id}:role/administrators"
+    }
+  }
+
+  default_tags {
+    tags = var.provider_default_tags
   }
 }
 

@@ -4,6 +4,13 @@
 # 💥                                                            💥 #
 # 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 #
 
+variable "provider_default_tags" {
+  type = map(string)
+  default = {
+    "ManagedBy" = "Terraform"
+  }
+}
+
 variable "region" {
   type    = string
   default = "eu-west-1"
