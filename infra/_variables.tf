@@ -88,10 +88,6 @@ variable "ns_env_name" {
   default = ""
 }
 
-variable "key_pair_public" {
-  type = string
-}
-
 variable "kubectl_config_path" {
   description = "The path to the config file to use for kubectl. If empty, defaults to $HOME/.kube/config"
   type        = string
@@ -144,7 +140,7 @@ variable "home_ips" {
     # Peter Frescura (gh:puzzledvacuum email:peterf@ringier.co.za)
     "165.255.244.123/32",
     # Stephen Perelson (gh:sperelson email:stephenp@ringier.co.za)
-    "102.212.97.62/32",
+    "102.218.60.50/32",
   ]
 }
 
@@ -166,7 +162,7 @@ variable "home_ips_no_suffix" {
     # Peter Frescura (gh:puzzledvacuum email:peterf@ringier.co.za)
     "165.255.244.123",
     # Stephen Perelson (gh:sperelson email:stephenp@ringier.co.za)
-    "102.212.97.62",
+    "102.218.60.50",
   ]
 }
 

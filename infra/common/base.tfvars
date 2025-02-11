@@ -203,7 +203,7 @@ vpcs = {
   "ritdu-mkt-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
   "ritdu-mkt-eu1.account_id"       = "032310891895"
 
-  # imo
+  # ecom
   # ritdu-ecom
   "ritdu-ecom-eu1.cidr"             = "10.26.0.0/19"
   "ritdu-ecom-eu1.single_natgw"     = "true"
@@ -287,9 +287,28 @@ vpcs = {
   "ritdu-ias-eu1.region"           = "eu-central-1"
   "ritdu-ias-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
   "ritdu-ias-eu1.account_id"       = "337909768645"
+
+  # ritdu-rsmg
+  # ritdu-rsmg-eu1
+  "ritdu-rsmg-eu1.cidr"             = "10.33.0.0/19"
+  "ritdu-rsmg-eu1.single_natgw"     = "true"
+  "ritdu-rsmg-eu1.private_subs"     = "10.33.0.0/24 10.33.1.0/24 10.33.2.0/24"
+  "ritdu-rsmg-eu1.database_subs"    = "10.33.5.0/24 10.33.6.0/24 10.33.7.0/24"
+  "ritdu-rsmg-eu1.elasticache_subs" = "10.33.10.0/24 10.33.11.0/24 10.33.19.0/24"
+  "ritdu-rsmg-eu1.public_subs"      = "10.33.15.0/24 10.33.16.0/24 10.33.17.0/24"
+  "ritdu-rsmg-eu1.region"           = "eu-west-1"
+  "ritdu-rsmg-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
+  "ritdu-rsmg-eu1.account_id"       = "975050125252"
+
+  # ritdu-ias
+  # ritdu-rias-mdb-eu1: occupies the whole VPC CIDR 10.44.0.0/16
+  "ritdu-rias-mdb-eu1.cidr"             = "10.44.96.0/19"
+  "ritdu-rias-mdb-eu1.single_natgw"     = "true"
+  "ritdu-rias-mdb-eu1.private_subs"     = "10.44.96.0/24 10.44.97.0/24 10.44.98.0/24"
+  "ritdu-rias-mdb-eu1.database_subs"    = "10.44.101.0/24 10.44.102.0/24 10.44.103.0/24"
+  "ritdu-rias-mdb-eu1.elasticache_subs" = "10.44.106.0/24 10.44.107.0/24 10.44.108.0/24"
+  "ritdu-rias-mdb-eu1.public_subs"      = "10.44.111.0/24 10.44.112.0/24 10.44.113.0/24"
+  "ritdu-rias-mdb-eu1.region"           = "eu-central-1"
+  "ritdu-rias-mdb-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
+  "ritdu-rias-mdb-eu1.account_id"       = "941377142040"
 }
-
-key_pair_public = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDxpBWOejlRWYxzNpw90N2Z7A0tKr6lBwlpRQNWJwDl3vVSA/N5QM5+TCJt7n7jbvvy+U729okIPdkm2DzupMLWKhouzBKgd/OWe8lipwyyWA6O1V57NssHP/O+gMPecB5UalQiiPtpwT/EtkY0KQQt5bd+ggExlgcdkDx/pPN3zFfdgbSKoBA4L1UB662mkKOGCwFVOemQlIGWmhHHf8eMoTsXJpNhs8wN3cH9+hReo0u8FrLv77zYlVTq9gzViQQkZD4PNJ6a+BhWWecBJ+Jhna+CPLK/oYsBoJChEPMWwqDpNaPMqxeFYYfsWABDmB5+e4e4mOmkXqLK9r4W9xd+cRGZo64cpan2p5sDyeKc+rKkZiE5cu7ZFLLAIHfBy/if1c3JagBnidlfXwJCHCoVBpHIIO2qNx76OjQiZcYjlmLCL6RDutn/1W3KPEfhMJpbMq5Dm5lQzAaArQLAmZptQf/7ClFnSbQmm8mKuYla9nAn2nryVs8jZPpnQycHSLaB/tDg7n54EcIAWq2Bc/Pv6yvdEC+oAUZc9ADU6HU9QXSDmqcLid0Lg+eNiGLZs3jRVgU3dzfwF35uAcTFbys2SVQm+vUX+hmfGkPLjlIEuUtBr1nwq2O7JmLcWo7Q6lloQNj1kw69d/PG3dqvAtZbVAo435LErcmcwoQEE3tuYw== base@ringierimu"
-
-
-

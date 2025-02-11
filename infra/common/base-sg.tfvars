@@ -20,5 +20,3 @@ vpcs = {
   "rimu.azs"              = "ap-southeast-1a ap-southeast-1b ap-southeast-1c"
   "rimu.account_id"       = 135132174985
 }
-
-key_pair_public = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDxpBWOejlRWYxzNpw90N2Z7A0tKr6lBwlpRQNWJwDl3vVSA/N5QM5+TCJt7n7jbvvy+U729okIPdkm2DzupMLWKhouzBKgd/OWe8lipwyyWA6O1V57NssHP/O+gMPecB5UalQiiPtpwT/EtkY0KQQt5bd+ggExlgcdkDx/pPN3zFfdgbSKoBA4L1UB662mkKOGCwFVOemQlIGWmhHHf8eMoTsXJpNhs8wN3cH9+hReo0u8FrLv77zYlVTq9gzViQQkZD4PNJ6a+BhWWecBJ+Jhna+CPLK/oYsBoJChEPMWwqDpNaPMqxeFYYfsWABDmB5+e4e4mOmkXqLK9r4W9xd+cRGZo64cpan2p5sDyeKc+rKkZiE5cu7ZFLLAIHfBy/if1c3JagBnidlfXwJCHCoVBpHIIO2qNx76OjQiZcYjlmLCL6RDutn/1W3KPEfhMJpbMq5Dm5lQzAaArQLAmZptQf/7ClFnSbQmm8mKuYla9nAn2nryVs8jZPpnQycHSLaB/tDg7n54EcIAWq2Bc/Pv6yvdEC+oAUZc9ADU6HU9QXSDmqcLid0Lg+eNiGLZs3jRVgU3dzfwF35uAcTFbys2SVQm+vUX+hmfGkPLjlIEuUtBr1nwq2O7JmLcWo7Q6lloQNj1kw69d/PG3dqvAtZbVAo435LErcmcwoQEE3tuYw== base@ringierimu"

@@ -286,6 +286,28 @@ vpcs = {
   "ritdu-ias-eu1.region"           = "eu-central-1"
   "ritdu-ias-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
   "ritdu-ias-eu1.account_id"       = "337909768645"
-}
 
-key_pair_public = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDMVftSUkukzjMGe7ORWkh5UHoiF+4AyaGtkYzLsyDsiqQqWEljn+tNccu62zTyHrc7s39Yy8Anqox44fXgcvCaTIqHFYdIJdCqivQ0g5uminw1JSDl2YNDDVI/rhgobITVPwrCav+kCq3Ar+KBXfrX+pYLGyiEpXsUgxKgmQGHvnwCAaJ7C4G7tcB3z4m3qsE6xgTqq6LYXU/fH/d0FnmVVy/zuM1sXXskLCm1rj3oQME3xoI2PoTLxR5NZbqKgU1KanhN0ioCOH4wiqiBUdHrEW7Jt5sSKveZqGwMOgohbwEXNESq7n9tMqOS4sWfI3klAH09yMYOc588lkR2zTIPoMtfoOciX/WBCk9GLYzCID8SnrdxSi6fqRssYJoyxOe+ZPjEU1rkgSh3r5sPyU9wPdn8+eizApW8enbaLfORoJKe9orPEJGkb80ydYs/uDkhcLXS2p+bZIOi+WNnsb6NPu98XZdEcW0A6hc7SjHrtwB49xe+YLY85Vseiffvvt6LopP942lSvkmqTPKNGA4c+Iv3I1bixGQUt6ALpX+/NRjk/qBGXszPOBnLv+V6airCHcyxxXxy5nneK3Ecaddt8zT+X+WgVyNITaZF9uCl8w4PJ+rUCloCvUDhsF6uSBMh0PaWK49z8KE+BmHZLYKE9LNHGowh+e+XVpRY5HebjQ== prod@ringierimu"
+  # ritdu-rsmg
+  # ritdu-rsmg-eu1
+  "ritdu-rsmg-eu1.cidr"             = "10.33.96.0/19"
+  "ritdu-rsmg-eu1.single_natgw"     = "true"
+  "ritdu-rsmg-eu1.private_subs"     = "10.33.96.0/24 10.33.97.0/24 10.33.98.0/24"
+  "ritdu-rsmg-eu1.database_subs"    = "10.33.101.0/24 10.33.102.0/24 10.33.103.0/24"
+  "ritdu-rsmg-eu1.elasticache_subs" = "10.33.106.0/24 10.33.107.0/24 10.33.108.0/24"
+  "ritdu-rsmg-eu1.public_subs"      = "10.33.111.0/24 10.33.112.0/24 10.33.113.0/24"
+  "ritdu-rsmg-eu1.region"           = "eu-west-1"
+  "ritdu-rsmg-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
+  "ritdu-rsmg-eu1.account_id"       = "975050125252"
+
+  # ritdu-ias
+  # ritdu-rias-mdb-eu1: occupies the whole VPC CIDR 10.44.0.0/16
+  "ritdu-rias-mdb-eu1.cidr"             = "10.44.192.0/19"
+  "ritdu-rias-mdb-eu1.single_natgw"     = "true"
+  "ritdu-rias-mdb-eu1.private_subs"     = "10.44.192.0/24 10.44.193.0/24 10.44.194.0/24"
+  "ritdu-rias-mdb-eu1.database_subs"    = "10.44.197.0/24 10.44.198.0/24 10.44.199.0/24"
+  "ritdu-rias-mdb-eu1.elasticache_subs" = "10.44.202.0/24 10.44.203.0/24 10.44.204.0/24"
+  "ritdu-rias-mdb-eu1.public_subs"      = "10.44.207.0/24 10.44.208.0/24 10.44.209.0/24"
+  "ritdu-rias-mdb-eu1.region"           = "eu-central-1"
+  "ritdu-rias-mdb-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
+  "ritdu-rias-mdb-eu1.account_id"       = "941377142040"
+}
