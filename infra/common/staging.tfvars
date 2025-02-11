@@ -286,8 +286,28 @@ vpcs = {
   "ritdu-ias-eu1.region"           = "eu-central-1"
   "ritdu-ias-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
   "ritdu-ias-eu1.account_id"       = "337909768645"
+
+  # ritdu-rsmg
+  # ritdu-rsmg-eu1
+  "ritdu-rsmg-eu1.cidr"             = "10.33.64.0/19"
+  "ritdu-rsmg-eu1.single_natgw"     = "true"
+  "ritdu-rsmg-eu1.private_subs"     = "10.33.64.0/24 10.33.65.0/24 10.33.66.0/24"
+  "ritdu-rsmg-eu1.database_subs"    = "10.33.69.0/24 10.33.70.0/24 10.33.71.0/24"
+  "ritdu-rsmg-eu1.elasticache_subs" = "10.33.74.0/24 10.33.75.0/24 10.33.76.0/24"
+  "ritdu-rsmg-eu1.public_subs"      = "10.33.79.0/24 10.33.80.0/24 10.33.81.0/24"
+  "ritdu-rsmg-eu1.region"           = "eu-west-1"
+  "ritdu-rsmg-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
+  "ritdu-rsmg-eu1.account_id"       = "975050125252"
+
+  # ritdu-ias
+  # ritdu-rias-mdb-eu1: occupies the whole VPC CIDR 10.44.0.0/16
+  # 10.44.128.0/21 => 8*/24 => 2*/24 per private/database/public with 2*/24 unassigned
+  "ritdu-rias-mdb-eu1.cidr"          = "10.44.128.0/21"
+  "ritdu-rias-mdb-eu1.single_natgw"  = "true"
+  "ritdu-rias-mdb-eu1.private_subs"  = "10.44.128.0/24 10.44.129.0/24"
+  "ritdu-rias-mdb-eu1.database_subs" = "10.44.130.0/24 10.44.131.0/24"
+  "ritdu-rias-mdb-eu1.public_subs"   = "10.44.132.0/24 10.44.133.0/24"
+  "ritdu-rias-mdb-eu1.region"        = "eu-central-1"
+  "ritdu-rias-mdb-eu1.azs"           = "eu-central-1a eu-central-1b"
+  "ritdu-rias-mdb-eu1.account_id"    = "941377142040"
 }
-
-key_pair_public = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDaDnF2AhXZyX6wGz3JXIX27Ix3kEoGfqO1DsDfnJ66xlV+LVq+j6hmYWrED6tUI7Bj6UNiGi1UXOaTvI9tGcpUgEigyIJLUWSptzxIXQCf+/YVvmhVqKk2wbRrJmP5z9zPj3JLuLjaygci1KeuoJAx10CSzMX8zVCXXB68dAeDE1hcIYU2pSMBnF2y5HHg3UT3A8mpIuW/raZR0Ic+dHXqHUgWye2IisZrLXshRjW1W9jxVNpUOgFhJl2VJCNGb21sZ+FXhL4St0TNtRDBzhpPBQrNuXcTneC8JG5aLorw3jWwIpbubGcOFUnFG0x5UZZut1bKFaw2NxDInhQHQeNcgjPBhoyd5WjDP/xa1DV7DwK5K5eyfBwTYHX2FpWxHzA6Vg+1dgT4kEz9vXSTZn5UorYbM+SRPGA/OLCjetJ3j0eZKYMtYWBJjhpenFTAvJNbjyiN6C9dnBRcotEhE1CcEtyZaIF3dUWHtCZN8j/T5uPFXKx9wuc2jhwTY3wcDCpqf0G9LXffyxNK6RtPdew4A6Awc3CNUqh8eyVwJ7p8lAJzo27nsHAIysc2/Y+Vc4aMK43vn9omBVd5GNWTZZIcB7nogacKp+pRA0aAduQFIHVBgYjkr3Ne3ZQ5EwsJhwtBhbVWuYfBB8ZIcBBN24Qqhaq8HJNQsBAcJ9sxOOKZ8w== staging@ringierimu"
-
-

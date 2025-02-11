@@ -286,9 +286,28 @@ vpcs = {
   "ritdu-ias-eu1.region"           = "eu-central-1"
   "ritdu-ias-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
   "ritdu-ias-eu1.account_id"       = "337909768645"
+
+  # ritdu-rsmg
+  # ritdu-rsmg-eu1
+  "ritdu-rsmg-eu1.cidr"             = "10.33.32.0/19"
+  "ritdu-rsmg-eu1.single_natgw"     = "true"
+  "ritdu-rsmg-eu1.private_subs"     = "10.33.32.0/24 10.33.33.0/24 10.33.34.0/24"
+  "ritdu-rsmg-eu1.database_subs"    = "10.33.37.0/24 10.33.38.0/24 10.33.39.0/24"
+  "ritdu-rsmg-eu1.elasticache_subs" = "10.33.42.0/24 10.33.43.0/24 10.33.44.0/24"
+  "ritdu-rsmg-eu1.public_subs"      = "10.33.47.0/24 10.33.48.0/24 10.33.49.0/24"
+  "ritdu-rsmg-eu1.region"           = "eu-west-1"
+  "ritdu-rsmg-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
+  "ritdu-rsmg-eu1.account_id"       = "975050125252"
+
+  # ritdu-ias
+  # ritdu-rias-mdb-eu1: occupies the whole VPC CIDR 10.44.0.0/16
+  "ritdu-rias-mdb-eu1.cidr"             = "10.44.160.0/19"
+  "ritdu-rias-mdb-eu1.single_natgw"     = "true"
+  "ritdu-rias-mdb-eu1.private_subs"     = "10.44.160.0/24 10.44.161.0/24 10.44.162.0/24"
+  "ritdu-rias-mdb-eu1.database_subs"    = "10.44.165.0/24 10.44.166.0/24 10.44.167.0/24"
+  "ritdu-rias-mdb-eu1.elasticache_subs" = "10.44.170.0/24 10.44.171.0/24 10.44.172.0/24"
+  "ritdu-rias-mdb-eu1.public_subs"      = "10.44.175.0/24 10.44.176.0/24 10.44.177.0/24"
+  "ritdu-rias-mdb-eu1.region"           = "eu-central-1"
+  "ritdu-rias-mdb-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
+  "ritdu-rias-mdb-eu1.account_id"       = "941377142040"
 }
-
-key_pair_public = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9w93ILQrlf0sVIKP6ZHD3fb3zZsmhUoiKYjwIvwXlVb0pjFr9TnOZEaFvsxqWUVU48svVAwLCiexZMs2I5vcXsNYPzDuLH7KXcSPhJ5GS4QfMxtTaJ12TsSqpqF6/J98Z/81Gv0xb9XN11xt7U3RmhdBTTaNpBV7eFX9YLMSqYdwLzMVa5Xq8KDoZXUAmWpTVQmMN6VG9uRpCnP2jffUZ7SEg7K1Y18D9CK+dqVlan9j+qdRqnK3mefQuyr0M25r60GZcSdLDRhhaky0tXubOW9FN1+IhFpYOaScoJj2ra++Iy3ITH+Sq81G1xgboGEE/mzC1YCnYAxm4+kbz28Fgkhw/DgRItmXH9fqq9fHC2/gzdiIsqqoEwljLnWUzUot3bBJrqLyamDJx44SRg8S/LkfFx0C9suQ1Qr15DFMrh36cUimgs5P6yb034ZXdn2Edu+1fUMKkLUPPOPQSU2ecM3grJu6dlxJ/EH6FuluqmhbStv0JHHuV0xBkGZqiVPk0T0qqb1DTso3+cptA91u0QzOTZmEcSZ2tG4Fv2I9UI3VQLEe/ywFSXWAc/w+rtdNM3w6a0FoK350Gd3fq/g74FfdRcb2c0uNyhgwBm7VOkA9AD0VTAIpMxIAGmwH2zoutE3q8nMJx6TzkwEo8FrjM1yDI7Q6kwBQ+Qc/ZUm55kQ== qa@ringierimu"
-
-
-

@@ -33,12 +33,14 @@ locals {
     "ritdu-sports-eu1",
     "ritdu-logs-eu1",
     "ritdu-ias-eu1",
+    "ritdu-rsmg-eu1",
+    "ritdu-rias-mdb-eu1",
   ]
 
   main_vpc_cidr             = var.vpcs["${var.prefix}.cidr"]
   main_vpc_private_subs     = split(" ", var.vpcs["${var.prefix}.private_subs"])
   main_vpc_database_subs    = split(" ", var.vpcs["${var.prefix}.database_subs"])
-  main_vpc_elasticache_subs = split(" ", var.vpcs["${var.prefix}.elasticache_subs"])
+  main_vpc_elasticache_subs = var.prefix != "ritdu-rias-mdb-eu1" ? split(" ", var.vpcs["${var.prefix}.elasticache_subs"]) : null
   main_vpc_public_subs      = split(" ", var.vpcs["${var.prefix}.public_subs"])
   main_vpc_region           = var.vpcs["${var.prefix}.region"]
   main_vpc_azs              = split(" ", var.vpcs["${var.prefix}.azs"])
