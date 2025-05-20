@@ -1,6 +1,6 @@
 
 terraform {
-  required_version = ">= 1.11.1"
+  required_version = ">= 1.11.4"
   required_providers {
     archive = {
       source = "hashicorp/archive" # https://registry.terraform.io/providers/hashicorp/archive/latest
@@ -11,7 +11,7 @@ terraform {
     }
     cloudflare = {
       source  = "cloudflare/cloudflare" # https://registry.terraform.io/providers/cloudflare/cloudflare/latest
-      version = "~> 5.0"
+      version = "~> 5.4"
     }
     datadog = {
       source  = "datadog/datadog" # https://registry.terraform.io/providers/datadog/datadog/latest
