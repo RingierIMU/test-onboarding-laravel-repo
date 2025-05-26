@@ -29,8 +29,6 @@ locals {
     "ritdu-vapor-eu1",
     "ritdu-cds-eu1",
     "ritdu-sol-eu1",
-    "ritdu-nex-eu1",
-    "ritdu-sports-eu1",
     "ritdu-logs-eu1",
     "ritdu-ias-eu1",
     "ritdu-rsmg-eu1",

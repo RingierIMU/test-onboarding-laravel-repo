@@ -20,7 +20,23 @@ variable "vpcs" {
   type = map(string)
 }
 
-# sports account
+# property radar account
+variable "cloudflare_account_id_prop_radar" {
+  type    = string
+  default = "383f80678056a7629e1dc2d9f0af8668"
+}
+
+variable "cloudflare_email_prop_radar" {
+  type    = string
+  default = ""
+}
+
+variable "cloudflare_token_prop_radar" {
+  type    = string
+  default = ""
+}
+
+# Sports account (backwards compatibility)
 variable "cloudflare_account_id_sports" {
   type    = string
   default = "b75621b4c14284e6957e8091d0272db8"
@@ -32,6 +48,54 @@ variable "cloudflare_email_sports" {
 }
 
 variable "cloudflare_token_sports" {
+  type    = string
+  default = ""
+}
+
+# Sports Serbia account
+variable "cloudflare_account_id_sports_rs" {
+  type    = string
+  default = "b75621b4c14284e6957e8091d0272db8"
+}
+
+variable "cloudflare_email_sports_rs" {
+  type    = string
+  default = ""
+}
+
+variable "cloudflare_token_sports_rs" {
+  type    = string
+  default = ""
+}
+
+# Sports Hungary account
+variable "cloudflare_account_id_sports_hu" {
+  type    = string
+  default = "733e4172c5cba5b4eebcc66dcbc817ca"
+}
+
+variable "cloudflare_email_sports_hu" {
+  type    = string
+  default = ""
+}
+
+variable "cloudflare_token_sports_hu" {
+  type    = string
+  default = ""
+}
+
+# Sports Portugal account
+variable "cloudflare_account_id_sports_pt" {
+  type    = string
+  default = "61e6c351e19b88e77cf121ac406f7903"
+}
+
+variable "cloudflare_email_sports_pt" {
+  type    = string
+  default = ""
+}
+
+variable "cloudflare_token_sports_pt" {
   type    = string
   default = ""
 }

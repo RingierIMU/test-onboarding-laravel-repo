@@ -131,17 +131,17 @@ vpcs = {
   "cube-sdc-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
   "cube-sdc-eu1.account_id"       = "013389100338"
 
-  # nexus ai
-  # ritdu-nex
-  "ritdu-nex-eu1.cidr"             = "10.20.0.0/19"
-  "ritdu-nex-eu1.single_natgw"     = "true"
-  "ritdu-nex-eu1.private_subs"     = "10.20.0.0/24 10.20.1.0/24 10.20.2.0/24"
-  "ritdu-nex-eu1.database_subs"    = "10.20.5.0/24 10.20.6.0/24 10.20.7.0/24"
-  "ritdu-nex-eu1.elasticache_subs" = "10.20.10.0/24 10.20.11.0/24 10.20.19.0/24"
-  "ritdu-nex-eu1.public_subs"      = "10.20.15.0/24 10.20.16.0/24 10.20.17.0/24"
-  "ritdu-nex-eu1.region"           = "eu-west-1"
-  "ritdu-nex-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
-  "ritdu-nex-eu1.account_id"       = "253624119624"
+  # unused 2
+  # ritdu-unused-2
+  "ritdu-unused2-eu1.cidr"             = "10.20.0.0/19"
+  "ritdu-unused2-eu1.single_natgw"     = "true"
+  "ritdu-unused2-eu1.private_subs"     = "10.20.0.0/24 10.20.1.0/24 10.20.2.0/24"
+  "ritdu-unused2-eu1.database_subs"    = "10.20.5.0/24 10.20.6.0/24 10.20.7.0/24"
+  "ritdu-unused2-eu1.elasticache_subs" = "10.20.10.0/24 10.20.11.0/24 10.20.19.0/24"
+  "ritdu-unused2-eu1.public_subs"      = "10.20.15.0/24 10.20.16.0/24 10.20.17.0/24"
+  "ritdu-unused2-eu1.region"           = "eu-west-1"
+  "ritdu-unused2-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
+  "ritdu-unused2-eu1.account_id"       = "000000000002"
 
   # hex
   # ritdu-hex
@@ -155,17 +155,17 @@ vpcs = {
   "ritdu-hex-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
   "ritdu-hex-eu1.account_id"       = "592990123379"
 
-  # sports
-  # ritdu-sports
-  "ritdu-sports-eu1.cidr"             = "10.22.0.0/19"
-  "ritdu-sports-eu1.single_natgw"     = "true"
-  "ritdu-sports-eu1.private_subs"     = "10.22.0.0/24 10.22.1.0/24 10.22.2.0/24"
-  "ritdu-sports-eu1.database_subs"    = "10.22.5.0/24 10.22.6.0/24 10.22.7.0/24"
-  "ritdu-sports-eu1.elasticache_subs" = "10.22.10.0/24 10.22.11.0/24 10.22.19.0/24"
-  "ritdu-sports-eu1.public_subs"      = "10.22.15.0/24 10.22.16.0/24 10.22.17.0/24"
-  "ritdu-sports-eu1.region"           = "eu-west-1"
-  "ritdu-sports-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
-  "ritdu-sports-eu1.account_id"       = "381491892809"
+  # unused 1
+  # ritdu-unused 1
+  "ritdu-unused-eu1.cidr"             = "10.22.0.0/19"
+  "ritdu-unused-eu1.single_natgw"     = "true"
+  "ritdu-unused-eu1.private_subs"     = "10.22.0.0/24 10.22.1.0/24 10.22.2.0/24"
+  "ritdu-unused-eu1.database_subs"    = "10.22.5.0/24 10.22.6.0/24 10.22.7.0/24"
+  "ritdu-unused-eu1.elasticache_subs" = "10.22.10.0/24 10.22.11.0/24 10.22.12.0/24"
+  "ritdu-unused-eu1.public_subs"      = "10.22.15.0/24 10.22.16.0/24 10.22.17.0/24"
+  "ritdu-unused-eu1.region"           = "eu-west-1"
+  "ritdu-unused-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
+  "ritdu-unused-eu1.account_id"       = "000000000001"
 
   # meta
   # ritdu-meta

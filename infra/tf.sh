@@ -7,7 +7,7 @@
 # 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 💥 #
 
 readlink_bin="${READLINK_PATH:-readlink}"
-if ! "${readlink_bin}" -f test &> /dev/null; then
+if ! "${readlink_bin}" -f test &>/dev/null; then
   __DIR__="$(dirname "$(python3 -c "import os,sys; print(os.path.realpath(os.path.expanduser(sys.argv[1])))" "${0}")")"
 else
   __DIR__="$(dirname "$("${readlink_bin}" -f "${0}")")"
@@ -90,7 +90,7 @@ install_terraform() {
       sudo chown "${USER}" "${target_bin:?}"
     fi
 
-    unzip -qjop "${zip_file}" "terraform" > "${target_bin:?}"
+    unzip -qjop "${zip_file}" "terraform" >"${target_bin:?}"
     chmod +x "${target_bin:?}"
     rm -f "${zip_file}"
   else
@@ -100,16 +100,16 @@ install_terraform() {
 
 check_terraform() {
   # --version flag available on gawk
-  if ! awk --version > /dev/null; then
+  if ! awk --version >/dev/null; then
     consolelog "gawk is not installed" error
     throw_exception
   fi
 
   # prefer tfenv method
-  if command -v tfenv > /dev/null && ! tfenv list | awk '/'"${terraform_version}"'/' | grep . > /dev/null; then
+  if command -v tfenv >/dev/null && ! tfenv list | awk '/'"${terraform_version}"'/' | grep . >/dev/null; then
     consolelog "Using tfenv" success
     lock_or_wait "check_terraform.lock"
-    if ! tfenv list | awk '/'"${terraform_version}"'/' | grep . > /dev/null; then
+    if ! tfenv list | awk '/'"${terraform_version}"'/' | grep . >/dev/null; then
       tfenv install "${terraform_version}"
     else
       consolelog "Found terraform v${terraform_version}" success
@@ -117,7 +117,7 @@ check_terraform() {
     return 0
   fi
   # fallback to native install
-  if ! command -v terraform > /dev/null || ! terraform --version | grep -qF "Terraform v${terraform_version}"; then
+  if ! command -v terraform >/dev/null || ! terraform --version | grep -qF "Terraform v${terraform_version}"; then
     consolelog "Using native terraform" success
     lock_or_wait "check_terraform.lock"
     install_terraform
@@ -125,17 +125,17 @@ check_terraform() {
 }
 
 check_provider_aws() {
-  if ! command -v aws > /dev/null; then
+  if ! command -v aws >/dev/null; then
     sudo -H pip3 install awscli -U
   fi
 
-  if ! aws --profile "${aws_profile}" configure list > /dev/null; then
+  if ! aws --profile "${aws_profile}" configure list >/dev/null; then
     aws --profile "${aws_profile}" configure
   fi
 }
 
 check_terraecs() {
-  if ! command -v terraecs > /dev/null; then
+  if ! command -v terraecs >/dev/null; then
     sudo -H pip3 install terraecs -U
   fi
 }
@@ -164,22 +164,20 @@ target_upgrade() {
 
   if [ -f _variables.tf ]; then
     if grep "imobiliare.ro" _variables.tf; then
-      region=$(get_variable_default "region" < _variables.tf)
-      ns_zone_new=$(get_variable_default "ns_zone_new" < _variables.tf)
-      ns_zone_id_new=$(get_variable_default "ns_zone_id_new" < _variables.tf)
-      maintenance_window=$(get_variable_default "maintenance_window" < _variables.tf)
+      region=$(get_variable_default "region" <_variables.tf)
+      ns_zone_new=$(get_variable_default "ns_zone_new" <_variables.tf)
+      ns_zone_id_new=$(get_variable_default "ns_zone_id_new" <_variables.tf)
+      maintenance_window=$(get_variable_default "maintenance_window" <_variables.tf)
       change_ns_zone=1
     fi
   fi
 
   if [[ "${change_cloudflare}" -eq 1 ]]; then
     consolelog "cloudflare change detected"
-    email=$(get_cloudflare_value "email" < _providers.tf)
-    api_key=$(get_cloudflare_value "api_key" < _providers.tf)
+    email=$(get_cloudflare_value "email" <_providers.tf)
+    api_key=$(get_cloudflare_value "api_key" <_providers.tf)
     consolelog "DEBUG: current email=${email}"
   fi
-
-
 
   cp -f tmp_common/*.tf tmp_common/{.gitignore,.terraform-version,.tf-common-version} ./
   cp -f tmp_common/common/*.tfvars ./common/
@@ -192,8 +190,8 @@ target_upgrade() {
     rm -f _providers.tf.bak
   fi
   if [[ "${change_cloudflare}" -eq 1 ]]; then
-    default_email=$(get_cloudflare_value "email" < _providers.tf)
-    default_api_key=$(get_cloudflare_value "api_key" < _providers.tf)
+    default_email=$(get_cloudflare_value "email" <_providers.tf)
+    default_api_key=$(get_cloudflare_value "api_key" <_providers.tf)
     if [[ ! -z ${default_email} ]] && [[ ! -z ${email} ]]; then
       consolelog "Changing the email back to ${email} from ${default_email}"
       sed -i.bak "s#${default_email}#${email}#g" _providers.tf
@@ -212,10 +210,10 @@ target_upgrade() {
     fi
   fi
   if [[ "${change_ns_zone}" -eq 1 ]]; then
-    default_region=$(get_variable_default "region" < _variables.tf)
-    default_ns_zone=$(get_variable_default "ns_zone_new" < _variables.tf)
-    default_ns_zone_id=$(get_variable_default "ns_zone_id_new" < _variables.tf)
-    default_maintenance_window=$(get_variable_default "maintenance_window" < _variables.tf)
+    default_region=$(get_variable_default "region" <_variables.tf)
+    default_ns_zone=$(get_variable_default "ns_zone_new" <_variables.tf)
+    default_ns_zone_id=$(get_variable_default "ns_zone_id_new" <_variables.tf)
+    default_maintenance_window=$(get_variable_default "maintenance_window" <_variables.tf)
     if [[ ! -z ${default_region} ]] && [[ ! -z ${region} ]]; then
       consolelog "Changing the region back to ${region} from ${default_region}"
       sed -i.bak "s#${default_region}#${region}#g" _variables.tf
@@ -270,8 +268,8 @@ target_env() {
   cp -f tmp_env/*.tf ./
   cp -f tmp_env/Jenkinsfile.sample ./Jenkinsfile
 
-  sed "s/PREFIX/${PREFIX}/g" tmp_env/_remotes.tf.sample > _remotes.tf
-  sed "s/APP_NAME/${APP_NAME}/g" tmp_env/variables.tf.sample > variables.tf
+  sed "s/PREFIX/${PREFIX}/g" tmp_env/_remotes.tf.sample >_remotes.tf
+  sed "s/APP_NAME/${APP_NAME}/g" tmp_env/variables.tf.sample >variables.tf
 
   rm -rf tmp_env
 }
@@ -282,7 +280,7 @@ target_create() {
     exit 1
   fi
 
-  sed "s/APP_NAME/${APP_NAME}/g" _backend.tf.sample > _backend.tf
+  sed "s/APP_NAME/${APP_NAME}/g" _backend.tf.sample >_backend.tf
 
   sed -i.bak "s/PREFIX_SHORT/${PREFIX_SHORT}/g" _backend.tf
   rm -f _backend.tf.bak
@@ -295,7 +293,7 @@ target_create() {
 
   mkdir -p app
   for workspace in "${@}"; do
-    if ! terraform workspace select "${workspace}" 2> /dev/null; then
+    if ! terraform workspace select "${workspace}" 2>/dev/null; then
       terraform workspace new "${workspace}"
       touch "app/${workspace}.tfvars"
     fi
@@ -338,9 +336,9 @@ target_plan() {
       -lock-timeout=${TERRAFORM_LOCK_TIMEOUT:-600s} \
       -var-file="common/${ENV}.tfvars" \
       -var-file="app/${ENV}.tfvars" \
-      -out "${ENV}.plan" | tee "${ENV}.output"
+      -out "${ENV}.plan" 2>&1 | tee "${ENV}.output"
 
-    echo ${PIPESTATUS[0]} > "${TF_PID:?}.plan_exit_code"
+    echo ${PIPESTATUS[0]} >"${TF_PID:?}.plan_exit_code"
   ) &
 
   consolelog "waiting for terraform plan to finish"
@@ -457,7 +455,7 @@ target_runcmd() {
   fi
 
   terraform workspace select "${ENV}"
-  terraform output "${REPO_NAME//-/_}_cli_ecs_task" -json > output.json
+  terraform output "${REPO_NAME//-/_}_cli_ecs_task" -json >output.json
 
   AWS_PROFILE="${aws_profile}" terraecs -f output.json run "${@}"
 }
@@ -488,7 +486,7 @@ if [[ "$(type -t "${target}")" != "function" ]]; then
   consolelog "unknown target: ${target#*_}" "error"
 
   echo -e "\n\nAvailable targets:"
-  targets=( $(compgen -A function) )
+  targets=($(compgen -A function))
   for target in "${targets[@]}"; do
     if [[ "${target}" == "target_"* ]]; then
       echo "- ${target#*_}"
