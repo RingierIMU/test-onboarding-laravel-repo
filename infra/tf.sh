@@ -248,6 +248,9 @@ target_upgrade() {
     fi
   fi
 
+  # Ensure updates are formatted
+  terraform fmt -recursive
+
   exit 0
 }
 

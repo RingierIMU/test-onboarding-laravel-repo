@@ -11,7 +11,7 @@ terraform {
     }
     cloudflare = {
       source  = "cloudflare/cloudflare" # https://registry.terraform.io/providers/cloudflare/cloudflare/latest
-      version = "~> 5.4"
+      version = "~> 5.5"
     }
     datadog = {
       source  = "datadog/datadog" # https://registry.terraform.io/providers/datadog/datadog/latest
