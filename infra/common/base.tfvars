@@ -311,4 +311,16 @@ vpcs = {
   "ritdu-rias-mdb-eu1.region"           = "eu-central-1"
   "ritdu-rias-mdb-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
   "ritdu-rias-mdb-eu1.account_id"       = "941377142040"
+
+  # ritdu-ias
+  # rias-mdb-eu1: occupies the whole CIDR 10.200.0.0/16
+  "rias-mdb-eu1.cidr"             = "10.200.0.0/19"
+  "rias-mdb-eu1.single_natgw"     = "true"
+  "rias-mdb-eu1.private_subs"     = "10.200.0.0/24 10.200.1.0/24 10.200.2.0/24"
+  "rias-mdb-eu1.database_subs"    = "10.200.5.0/24 10.200.6.0/24 10.200.7.0/24"
+  "rias-mdb-eu1.elasticache_subs" = "10.200.10.0/24 10.200.11.0/24 10.200.12.0/24"
+  "rias-mdb-eu1.public_subs"      = "10.200.15.0/24 10.200.16.0/24 10.200.17.0/24"
+  "rias-mdb-eu1.region"           = "eu-central-1"
+  "rias-mdb-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
+  "rias-mdb-eu1.account_id"       = "321298294662"
 }

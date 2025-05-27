@@ -16,7 +16,7 @@ terraform {
     encrypt    = true
     kms_key_id = "alias/base/s3"
 
-    dynamodb_table = "rimu-tf-state"
+    use_lockfile = true
   }
 }
 
