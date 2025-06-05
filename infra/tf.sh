@@ -143,7 +143,7 @@ check_terraecs() {
 target_upgrade() {
   local git_repo="${1:-git@github.com:RingierIMU/tf-common.git}" git_branch="${2:-master}"
 
-  local change_profile=0 change_cloudflare=0 change_ns_zone=0
+  local change_profile=0 change_cloudflare=0 change_ns_zone=0 change_region=0
   local region default_region ns_zone_new default_ns_zone ns_zone_id_new default_ns_zone_id maintenance_window default_maintenance_window
   local email default_email api_key default_api_key
   consolelog "Using git branch: ${git_branch} from: ${git_repo}"
@@ -164,11 +164,17 @@ target_upgrade() {
 
   if [ -f _variables.tf ]; then
     if grep "imobiliare.ro" _variables.tf; then
+      consolelog "imobiliare.ro change detected"
       region=$(get_variable_default "region" <_variables.tf)
       ns_zone_new=$(get_variable_default "ns_zone_new" <_variables.tf)
       ns_zone_id_new=$(get_variable_default "ns_zone_id_new" <_variables.tf)
       maintenance_window=$(get_variable_default "maintenance_window" <_variables.tf)
       change_ns_zone=1
+    fi
+    if grep "eu-central-1" _variables.tf; then
+      consolelog "eu-central-1 change detected"
+      region=$(get_variable_default "region" <_variables.tf)
+      change_region=1
     fi
   fi
 
@@ -188,6 +194,17 @@ target_upgrade() {
     consolelog "Changing the profile back to jenkins_instance_role"
     sed -i.bak "s#id}:role/administrators#id}:role/jenkins_instance_role#g" _providers.tf
     rm -f _providers.tf.bak
+  fi
+  if [[ "${change_region}" -eq 1 ]]; then
+    default_region=$(get_variable_default "region" <_variables.tf)
+    if [[ ! -z ${default_region} ]] && [[ ! -z ${region} ]]; then
+      consolelog "Changing the region back to ${region} from ${default_region}"
+      sed -i.bak "s#${default_region}#${region}#g" _variables.tf
+      rm -f _variables.tf.bak
+    else
+      consolelog "Either region: ${region} or default_region: ${default_region} empty" error
+      throw_exception
+    fi
   fi
   if [[ "${change_cloudflare}" -eq 1 ]]; then
     default_email=$(get_cloudflare_value "email" <_providers.tf)
