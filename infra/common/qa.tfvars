@@ -275,17 +275,17 @@ vpcs = {
   "ritdu-logs-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
   "ritdu-logs-eu1.account_id"       = "767397910791"
 
-  # ritdu-ias
-  # ritdu-ias-eu1
-  "ritdu-ias-eu1.cidr"             = "10.32.32.0/19"
-  "ritdu-ias-eu1.single_natgw"     = "true"
-  "ritdu-ias-eu1.private_subs"     = "10.32.32.0/24 10.32.33.0/24 10.32.34.0/24"
-  "ritdu-ias-eu1.database_subs"    = "10.32.37.0/24 10.32.38.0/24 10.32.39.0/24"
-  "ritdu-ias-eu1.elasticache_subs" = "10.32.42.0/24 10.32.43.0/24 10.32.44.0/24"
-  "ritdu-ias-eu1.public_subs"      = "10.32.47.0/24 10.32.48.0/24 10.32.49.0/24"
-  "ritdu-ias-eu1.region"           = "eu-central-1"
-  "ritdu-ias-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
-  "ritdu-ias-eu1.account_id"       = "337909768645"
+  # unused 3
+  # ritdu-unused-3
+  "ritdu-unused3-eu1.cidr"             = "10.32.32.0/19"
+  "ritdu-unused3-eu1.single_natgw"     = "true"
+  "ritdu-unused3-eu1.private_subs"     = "10.32.32.0/24 10.32.33.0/24 10.32.34.0/24"
+  "ritdu-unused3-eu1.database_subs"    = "10.32.37.0/24 10.32.38.0/24 10.32.39.0/24"
+  "ritdu-unused3-eu1.elasticache_subs" = "10.32.42.0/24 10.32.43.0/24 10.32.44.0/24"
+  "ritdu-unused3-eu1.public_subs"      = "10.32.47.0/24 10.32.48.0/24 10.32.49.0/24"
+  "ritdu-unused3-eu1.region"           = "eu-west-1"
+  "ritdu-unused3-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
+  "ritdu-unused3-eu1.account_id"       = "000000000003"
 
   # ritdu-rsmg
   # ritdu-rsmg-eu1
@@ -298,18 +298,6 @@ vpcs = {
   "ritdu-rsmg-eu1.region"           = "eu-west-1"
   "ritdu-rsmg-eu1.azs"              = "eu-west-1a eu-west-1b eu-west-1c"
   "ritdu-rsmg-eu1.account_id"       = "975050125252"
-
-  # ritdu-ias
-  # ritdu-rias-mdb-eu1: occupies the whole VPC CIDR 10.44.0.0/16
-  "ritdu-rias-mdb-eu1.cidr"             = "10.44.160.0/19"
-  "ritdu-rias-mdb-eu1.single_natgw"     = "true"
-  "ritdu-rias-mdb-eu1.private_subs"     = "10.44.160.0/24 10.44.161.0/24 10.44.162.0/24"
-  "ritdu-rias-mdb-eu1.database_subs"    = "10.44.165.0/24 10.44.166.0/24 10.44.167.0/24"
-  "ritdu-rias-mdb-eu1.elasticache_subs" = "10.44.170.0/24 10.44.171.0/24 10.44.172.0/24"
-  "ritdu-rias-mdb-eu1.public_subs"      = "10.44.175.0/24 10.44.176.0/24 10.44.177.0/24"
-  "ritdu-rias-mdb-eu1.region"           = "eu-central-1"
-  "ritdu-rias-mdb-eu1.azs"              = "eu-central-1a eu-central-1b eu-central-1c"
-  "ritdu-rias-mdb-eu1.account_id"       = "941377142040"
 
   # ritdu-ias
   # rias-mdb-eu1: occupies the whole CIDR 10.200.0.0/16
