@@ -99,9 +99,8 @@ install_terraform() {
 }
 
 check_terraform() {
-  # --version flag available on gawk
-  if ! awk --version >/dev/null; then
-    consolelog "gawk is not installed" error
+  if ! command -v awk >/dev/null; then
+    consolelog "awk is not installed" error
     throw_exception
   fi
 
